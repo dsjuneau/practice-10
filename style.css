@@ -1,0 +1,27 @@
+body,
+header,
+aside,
+main,
+footer,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 7vh;
+  background-color: cornflowerblue;
+}
+
+aside {
+  background-color: cyan;
+}
+
+main {
+  background-color: darkgrey;
+}
+
+footer {
+  background-color: grey;
+}
