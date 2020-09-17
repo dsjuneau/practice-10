@@ -19,6 +19,7 @@ display: block;
 display: inline;  
 display: inline-block;  
 display: none;
+display: grid;
 
 Another way to hide an element:  
 visibility: hidden;
