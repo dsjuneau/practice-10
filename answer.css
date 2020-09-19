@@ -13,13 +13,12 @@ body {
   display: grid;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 0.5em;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
   background-color: dimgrey;
 }
 header {
-  height: 7vh;
+  height: 5vh;
   background-color: cornflowerblue;
   grid-area: header;
   display: grid;
@@ -39,12 +38,35 @@ main {
   background-color: darkgrey;
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "aside section section";
-  column-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "aside" "section";
 }
 
 footer {
   background-color: grey;
   grid-area: footer;
+}
+
+nav a {
+  background-color: dodgerblue;
+  padding: 0.25rem;
+  text-decoration: none;
+  border-right: black solid 1px;
+}
+nav a:hover {
+  background-color: blue;
+}
+
+nav a:nth-child(4) {
+  border-right: none;
+}
+@media (min-width: 700px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+  }
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "aside section section";
+  }
 }
